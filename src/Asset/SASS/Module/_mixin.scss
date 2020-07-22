@@ -1,0 +1,45 @@
+@mixin inpStyle($border-radius, $fs, $pd-inp) {
+  border-radius: $border-radius;
+  // padding: $pd-x $pd-y;
+  font-size: $fs;
+  padding: $pd-inp;
+  margin-bottom: 20px;
+}
+
+@mixin labelStyle {
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-bottom: 10px;
+  color: $color-gray-400;
+}
+
+@mixin btnStyle($p, $bd, $radius, $fs, $fw, $color, $bg, $bg-hov, $color-hov, $fw-hov, $bor-hov ){
+  @include inpStyle($radius, $fs, $p);
+  border: $bd;
+  @include txtStyle($color, $fw);
+  background-color: $bg;
+  transition: all 0.5s;
+  &:hover{
+    background-color: $bg-hov;
+    @include txtStyle($color-hov, $fw-hov);
+    border: $bor-hov;
+    a{
+      color: $color-hov;
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin txtStyle($color, $fw){
+  color: $color;
+  font-weight: $fw;
+}
+
+@mixin widHei($w, $h){
+  width: $w;
+  height: $h;
+}

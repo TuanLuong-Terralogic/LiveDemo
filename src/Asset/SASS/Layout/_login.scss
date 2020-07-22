@@ -1,0 +1,151 @@
+.wrapper {
+  width: 95%;
+  margin: auto;
+  margin-top: 30px;
+  .login-container {
+    width: 100%;
+    margin: auto;
+    padding: 50px 150px;
+    box-shadow: 8px 8px 20px 2px gray;
+    .row {
+      margin: 0;
+      .col-xl-6 {
+        &.col-left {
+          padding: 0;
+          text-align: left;
+          .brand {
+            img {
+              margin-bottom: 20px;
+            }
+            small {
+              text-transform: uppercase;
+              color: $color-gray-400;
+            }
+          }
+          h3 {
+            margin: 20px 0;
+            @include txtStyle(#000, $fw-600);
+          }
+          .form-container {
+            // width: 80%;
+            margin-top: 20px;
+            margin: auto;
+            margin-left: 0;
+            margin-right: 8rem;
+            .form-group {
+              width: 100%;
+              label {
+                @include labelStyle;
+                &.form-check-label {
+                  margin-left: 20px;
+                }
+              }
+              input[type="text"] {
+                @include inpStyle(20px, 14px, $pd-inp);
+                background: url(../../img/Suche.svg) no-repeat scroll
+                  7px 11px;
+                width: 100%;
+                border: 1px solid $color-gray-border;
+                &:focus {
+                  box-shadow: none;
+                  border: 1px solid $color-gray-border;
+                }
+              }
+              .pass-wrapper {
+                width: 100%;
+                position: relative;
+                margin-bottom: 20px;
+                
+                input[type="password"] {
+                  @include inpStyle(20px, 14px, $pd-inp);
+                  background: url(../../img/Suche02.svg) no-repeat
+                    scroll 7px 11px;
+                  width: 100%;
+                  margin-bottom: 0;
+                  border: 1px solid $color-gray-border;
+                  &:focus {
+                    border: 1px solid $color-gray-border;
+                    box-shadow: none;
+                  }
+                }
+                .eye {
+                  position: absolute;
+                  bottom: 15px;
+                  right: 15px;
+                  cursor: pointer;
+                }
+              }
+
+              .button-row {
+                display: flex;
+                justify-content: space-between;
+                .btn {
+                  text-align: center;
+                  margin: auto;
+                  &:focus {
+                    outline: none;
+                    box-shadow: none;
+                  }
+                  &.btn-register {
+                    @include btnStyle(
+                      11px 54px, 
+                      2px solid $color-pink-terralogic,
+                      $bd-rad-2,
+                      14px,
+                      $fw-bold,
+                      $color-pink-terralogic,
+                      $color-white,
+                      $color-pink-terralogic,
+                      $color-white, $fw-bold,2px solid $color-pink-terralogic
+                    );
+                    margin-left: 0;
+                    margin-bottom: 0;
+                    .register{
+                      @include txtStyle($color-pink-terralogic, $fw-bold);
+                    }
+                  }
+
+                  &.btn-login {
+                    @include btnStyle(
+                      $pd-btn-2, 
+                      2px solid $color-pink-terralogic,
+                      $bd-rad-2,
+                      14px,
+                      $fw-bold,
+                      $color-white,
+                      $color-pink-terralogic,
+                      $color-white,
+                      $color-pink-terralogic, $fw-bold,
+                      2px solid $color-pink-terralogic
+                    );
+                    margin-right: 0;
+                    margin-bottom: 0;
+                    .login{
+                      @include txtStyle($color-white, $fw-bold);
+                      text-decoration: none;
+
+                    }
+                  }
+                }
+              }
+
+              input[type="checkbox"] {
+                margin-left: 0px;
+              }
+              ::placeholder {
+                margin-left: 7px;
+                @include txtStyle($color-gray-200, $fw-600);
+              }
+            }
+          }
+        }
+        &.img-container {
+          padding-right: 0;
+          img {
+            @include widHei(100%, 697px);
+          }
+        }
+      }
+    }
+  }
+}
